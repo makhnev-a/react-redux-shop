@@ -11,7 +11,7 @@ export const fetchPhones = () => async dispatch => {
     })
 
     try {
-        const phones = fetchPhonesApi();
+        const phones = await fetchPhonesApi();
         dispatch({
             type: FETCH_PHONES_SUCCESS,
             payload: phones
