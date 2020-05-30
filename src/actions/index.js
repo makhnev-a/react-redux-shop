@@ -39,9 +39,7 @@ export const fetchPhones = () => async dispatch => {
 export const loadMorePhones = () => async (dispatch, getState) => {
     const offset = getRenderedPhonesLength(getState());
 
-    dispatch({
-        type: LOAD_MORE_PHONES_START
-    })
+    dispatch({type: LOAD_MORE_PHONES_START});
 
     try {
         const phones = await loadMorePhonesApi({offset});
@@ -59,7 +57,7 @@ export const loadMorePhones = () => async (dispatch, getState) => {
 };
 
 export const fetchPhoneById = id => async dispatch => {
-    dispatch({FETCH_PHONE_BY_ID_START});
+    dispatch({type: FETCH_PHONE_BY_ID_START});
 
     try {
         const phone = fetchPhoneByIdApi(id);
