@@ -33,7 +33,7 @@ export const fetchPhones = () => async dispatch => {
 };
 
 export const loadMorePhones = () => async (dispatch, getState) => {
-    const offset = getRenderedPhonesLength(getState);
+    const offset = getRenderedPhonesLength(getState());
 
     dispatch({
         type: LOAD_MORE_PHONES_START
