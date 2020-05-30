@@ -60,7 +60,7 @@ export const fetchPhoneById = id => async dispatch => {
     dispatch({type: FETCH_PHONE_BY_ID_START});
 
     try {
-        const phone = fetchPhoneByIdApi(id);
+        const phone = await fetchPhoneByIdApi(id);
         console.log(phone)
         dispatch({
             type: FETCH_PHONE_BY_ID_SUCCESS,

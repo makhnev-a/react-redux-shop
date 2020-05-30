@@ -71,6 +71,7 @@ class Phone extends React.Component {
 
     render() {
         const {phone} = this.props;
+
         return (
             <div className={'view-container'}>
                 <div className={'container'}>
@@ -97,4 +98,5 @@ const mapStateToProps = state => {
          phone: getPhoneById(state, state.phonePage.id)
     };
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(Phone);
