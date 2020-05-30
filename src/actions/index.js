@@ -61,6 +61,7 @@ export const fetchPhoneById = id => async dispatch => {
 
     try {
         const phone = fetchPhoneByIdApi(id);
+        console.log(phone)
         dispatch({
             type: FETCH_PHONE_BY_ID_SUCCESS,
             payload: phone
